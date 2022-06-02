@@ -1,10 +1,10 @@
-import logo from './logo.svg';
 import './App.css';
+import Timer from './components/Timer/Timer';
 
 function App() {
   return (
     <div className="App">
-      <div>bball app</div>
+      <Timer />
     </div>
   );
 }
