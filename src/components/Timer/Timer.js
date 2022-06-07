@@ -1,4 +1,4 @@
-import Clock from './Clock/Clock'
+import Clock from '../Clock/Clock'
 import "./Timer.css";
 
 const Timer = () => {
