@@ -1,10 +1,12 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
+import { TimerContext } from "../../../Context/Context";
 import './Clock.css';
 
 const Clock = () => {
-  let [seconds, setseconds] = useState(10);
-  let [minutes, setminutes] = useState(2);
-  const [isRunning, setIsRunning] = useState(false);
+  // let [seconds, setseconds] = useState(10);
+  // let [minutes, setminutes] = useState(2);
+  // const [isRunning, setIsRunning] = useState(false);
+  let {seconds, setseconds ,minutes, setminutes, isRunning, setIsRunning} = useContext(TimerContext)
 
   // minutes does not below 0 if it does minutes gets reset to 0
   if (minutes < 0) {
