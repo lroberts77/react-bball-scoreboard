@@ -1,11 +1,11 @@
 import "./App.css";
-import Scores from "./components/Score/Scores/Scores";
+import Scores from "./components/Score/Scores";
 import Timer from "./components/Timer/Timer";
 
 function App() {
   return (
     <div className="App">
-        <Timer />
+      <Timer />
       <Scores />
     </div>
   );
