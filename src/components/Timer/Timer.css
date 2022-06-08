@@ -5,6 +5,7 @@
   flex-direction: row;
   flex-wrap: wrap;
 }
+
 .col-1 {
   width: 100%;
   display: flex;

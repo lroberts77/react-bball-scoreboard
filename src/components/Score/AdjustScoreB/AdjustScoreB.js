@@ -1,8 +1,9 @@
 import React from 'react'
+import './AdjustScoreB.css'
 
 const AdjustScoreB = () => {
   return (
-    <div>AdjustScoreB</div>
+    <div className='scoreB'>AdjustScoreB</div>
   )
 }
 
