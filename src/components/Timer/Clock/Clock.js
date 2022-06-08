@@ -1,11 +1,9 @@
-import { useState, useEffect, useContext } from "react";
+import { useEffect, useContext } from "react";
 import { TimerContext } from "../../../Context/Context";
 import './Clock.css';
 
 const Clock = () => {
-  // let [seconds, setseconds] = useState(10);
-  // let [minutes, setminutes] = useState(2);
-  // const [isRunning, setIsRunning] = useState(false);
+
   let {seconds, setseconds ,minutes, setminutes, isRunning, setIsRunning} = useContext(TimerContext)
 
   // minutes does not below 0 if it does minutes gets reset to 0
@@ -39,17 +37,16 @@ const Clock = () => {
   // if timer is running set interval to -1 from seconds every second else clear interval
   useEffect(() => {
     if (isRunning) {
-      let id = window.setInterval(() => {
+      var id = window.setInterval(() => {
         setseconds((seconds) => seconds - 1);
       }, 1000);
-      return () => window.clearInterval(id);
     }
-    return undefined;
-  }, [isRunning]);
+    return () => window.clearInterval(id);
+  }, [setseconds, isRunning]);
 
   return (
     <div className="clock">
-      <div>
+      <div className="countdown-timer">
         <span id="min" className="minutes">
           {minutes}
         </span>

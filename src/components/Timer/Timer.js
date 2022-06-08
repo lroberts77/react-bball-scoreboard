@@ -7,12 +7,12 @@ import "./Timer.css";
 
 const Timer = () => {
 
-  let [seconds, setseconds] = useState(10);
-  let [minutes, setminutes] = useState(2);
+  const [seconds, setseconds] = useState(0);
+  const [minutes, setminutes] = useState(0);
   const [isRunning, setIsRunning] = useState(false);
 
   return (
-    <TimerContext.Provider value={{seconds, setseconds ,minutes, setminutes, isRunning, setIsRunning}}>
+    <TimerContext.Provider value={{seconds, setseconds, minutes, setminutes, isRunning, setIsRunning}}>
       <div className="timer">
         <div className="col-1">
           <Clock />

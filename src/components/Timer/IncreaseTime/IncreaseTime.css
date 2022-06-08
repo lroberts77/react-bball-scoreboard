@@ -1,5 +1,6 @@
 .inc-time-col {
   display: flex;
-  flex: 1 1;
+  width: 50%;
   justify-content: center;
+  flex-direction: column;
 }

@@ -5,10 +5,9 @@ import { TimerContext } from "../../../Context/Context";
 const DecreaseTime = () => {
 
   let {setseconds, setminutes} = useContext(TimerContext)
-  
+
   return (
     <div className="dec-time-col">
-      {" "}
       <button
         id="timerMinus10s"
         onClick={() => setseconds((seconds) => seconds - 10)}
