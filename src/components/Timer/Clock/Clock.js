@@ -57,7 +57,7 @@ const Clock = () => {
       </div>
       <div className="buttons">
         {isRunning ? (
-          <button
+          <button className="timer-btn"
             id="start-stop"
             onClick={() => {
               setIsRunning(false);
@@ -66,11 +66,11 @@ const Clock = () => {
             Stop
           </button>
         ) : (
-          <button id="start-stop" onClick={() => setIsRunning(true)}>
+          <button className="timer-btn" id="start-stop" onClick={() => setIsRunning(true)}>
             Start
           </button>
         )}
-        <button
+        <button className="timer-btn"
           id="reset-timer"
           onClick={() => {
             setseconds((seconds = 0));

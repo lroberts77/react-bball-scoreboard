@@ -4,10 +4,15 @@ import './AdjustScoreA.css'
 
 const AdjustScoreA = () => {
 
-  let { scoresTeamA, setScoresTeamA, scoresTeamB, setScoresTeamB } = useContext(ScoreContext)
+  let { scoresTeamA, setScoresTeamA } = useContext(ScoreContext)
 
   return (
-    <div className='scoreA'>AdjustScoreA</div>
+    <>
+          <button id="increment-btnb" onClick={() => setScoresTeamA( scoresTeamA => scoresTeamA + 1 )}>+1</button>
+          <button id="increment3-btnb" onClick={() => setScoresTeamA( scoresTeamA => scoresTeamA + 3 )}>+3</button>
+          <button id="decrement-btnb" onClick={() => scoresTeamA <= 0 ? scoresTeamA => scoresTeamA = 0 : setScoresTeamA( scoresTeamA => scoresTeamA - 1 )}>-1</button>
+          <button id="reset-btnb" onClick={() => setScoresTeamA( scoresTeamA => scoresTeamA = 0 )}>Reset</button> 
+    </>
   )
 }
 

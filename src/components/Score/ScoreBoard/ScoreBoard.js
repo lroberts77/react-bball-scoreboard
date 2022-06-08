@@ -4,7 +4,7 @@ import './ScoreBoard.css'
 
 const ScoreBoard = () => {
 
-  let { scoresTeamA, setScoresTeamA, scoresTeamB, setScoresTeamB } = useContext(ScoreContext)
+  let { scoresTeamA, scoresTeamB } = useContext(ScoreContext)
 
   return (
     <div className='scoreBoard'>

@@ -3,10 +3,17 @@
 }
 
 .countdown-timer {
-  font-size: 9em;
+  font-size: 7em;
+  font-family: orbitron;
 }
 
 .buttons {
+  margin: auto;
+  width: 80%;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
+}
+
+.timer-btn {
+  width: 7.5em;
 }
