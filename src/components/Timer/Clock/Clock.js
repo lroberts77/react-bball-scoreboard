@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import './Clock.css';
 
 const Clock = () => {
   let [seconds, setseconds] = useState(10);
@@ -45,7 +46,7 @@ const Clock = () => {
   }, [isRunning]);
 
   return (
-    <>
+    <div className="clock">
       <div>
         <span id="min" className="minutes">
           {minutes}
@@ -81,7 +82,7 @@ const Clock = () => {
           Reset
         </button>
       </div>
-    </>
+    </div>
   );
 };
 
